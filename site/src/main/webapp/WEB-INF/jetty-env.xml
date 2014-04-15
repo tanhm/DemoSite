@@ -17,11 +17,13 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
-                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf</Set>
+                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf?useUnicode=true&amp;characterEncoding=utf-8</Set>
                 <Set name="username">root</Set>
                 <Set name="password">abc@122</Set>
+<!--
                 <Set name="useUnicode">true</Set>
                 <Set name="characterEncoding">UTF-8</Set>
+ -->            
             </New>
         </Arg>
     </New>
@@ -31,11 +33,13 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
-                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf</Set>
+                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf?useUnicode=true&amp;characterEncoding=utf-8</Set>
                 <Set name="username">root</Set>
                 <Set name="password">abc@122</Set>
+<!--
                 <Set name="useUnicode">true</Set>
                 <Set name="characterEncoding">UTF-8</Set>
+ -->            
             </New>
         </Arg>
     </New>
@@ -45,11 +49,13 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
-                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf</Set>
+                <Set name="url">jdbc:mysql://10.142.38.13:3306/broadleaf?useUnicode=true&amp;characterEncoding=utf-8</Set>
                 <Set name="username">root</Set>
                 <Set name="password">abc@122</Set>
+<!--
                 <Set name="useUnicode">true</Set>
                 <Set name="characterEncoding">UTF-8</Set>
+ -->            
             </New>
         </Arg>
     </New>
