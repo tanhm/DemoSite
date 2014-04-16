@@ -52,4 +52,14 @@
         </property>
     </bean>
 
+    <bean id="blCreateOrderWorkflow" class="org.broadleafcommerce.core.workflow.SequenceProcessor">
+        <property name="activities">
+            <list>
+                <!-- Create order -->
+                <bean p:order="10001" class="com.aviva.worklow.order.CreateOrderActivity" />
+                <!-- This activity should occur at the very end of the checkout workflow, after everything has been executed -->
+                <bean p:order="9999999" class="com.aviva.worklow.checkout.SendOrderConfirmationEmailActivity" />
+            </list>
+        </property>
+    </bean>
 </beans>
