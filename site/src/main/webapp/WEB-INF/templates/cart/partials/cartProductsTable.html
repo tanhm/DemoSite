@@ -14,7 +14,7 @@
             <td class="name">
                 <a th:href="@{*{product.url}}" th:text="*{product.name}"></a>
                 <br/>
-               <blc:product_option_display orderItem="${item}" >
+                <blc:product_option_display orderItem="${item}" >
                      <ul th:unless="${#lists.isEmpty(productOptionDisplayValues)}" class="productOptions">
                          <li th:each="entry: ${productOptionDisplayValues}">
                            <span  th:text="${entry.key} + ': ' + ${entry.value}"></span>

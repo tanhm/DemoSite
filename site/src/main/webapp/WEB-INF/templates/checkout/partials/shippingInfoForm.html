@@ -10,7 +10,7 @@
     </div>
 
     <div class="clearfix"></div>
-
+<!--  
     <div class="checkout_warning"
          th:if="${'INACTIVE' == sectionDTO.state.type}">
         <span th:text="${sectionDTO.helpMessage}"></span>
@@ -19,8 +19,8 @@
     <div th:if="${cart.fulfillmentGroups != null and numShippableFulfillmentGroups > 1}">
         <table th:replace="checkout/partials/multishipInfo :: multiship-info"></table>
     </div>
-
-    <div th:unless="${cart.fulfillmentGroups != null and numShippableFulfillmentGroups > 1}">
+-->
+    <div>
         <div th:replace="checkout/partials/singleShipInfo :: singleship-info"></div>
     </div>
 

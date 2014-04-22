@@ -4,7 +4,6 @@
                        orderInfoHelpMessage="#{cart.fillOutBasicOrder}"
                        billingInfoHelpMessage="#{cart.fillOutBillingAddress}"
                        shippingInfoHelpMessage="#{cart.fillOutShippingAddress}">
-
     <div id="cart">
 
         <div th:if="${#lists.isEmpty(cart.orderItems)}" class="checkout_warning">
@@ -24,7 +23,19 @@
             <div th:replace="checkout/partials/orderSummary :: order-summary"></div>
 
             <div class="clearfix"></div>
+            <div th:each="sectionDTO : ${checkoutSectionDTOs}" th:object="${sectionDTO}">
+                <div th:if="${'ORDER_INFO' == sectionDTO.view.type}">
+                    <div th:replace="checkout/partials/orderInfoForm :: order-info-form"
+                            th:with="${sectionDTO}"></div>
+                </div>
+                <div th:if="${'SHIPPING_INFO' == sectionDTO.view.type}">
+                    <div th:replace="checkout/partials/shippingInfoForm :: shipping-info-form"
+                            th:with="${sectionDTO}"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
 
+<!--  
             <div th:each="sectionDTO : ${checkoutSectionDTOs}" th:object="${sectionDTO}">
                 <div th:if="${'ORDER_INFO' == sectionDTO.view.type}">
                     <div th:replace="checkout/partials/orderInfoForm :: order-info-form"
@@ -44,7 +55,15 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
+-->      
 
+            <div>
+                <blc:form th:action="@{/checkout/cod/complete}"
+                          method="POST" id="complete_checkout"
+                          novalidate="novalidate">
+                    <input type="submit" class="medium red" th:value="#{cart.completOrder}" />
+                </blc:form>
+            </div>
         </div>
     </div>
 
